@@ -1,6 +1,5 @@
 import swaggerAutogen from "swagger-autogen";
 import "dotenv/config";
-import { version } from "mongoose";
 
 const env = process.env.NODE_ENV || "development";
 const host =
