@@ -1,0 +1,28 @@
+@devHost = http://localhost:3000
+
+GET {{devHost}}/critters
+###
+GET {{devHost}}/critters/6652b844a2aaf13dff8f4c88
+###
+POST {{devHost}}/critters HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Jill",
+  "intelligence": "4",
+  "body_plan": "crab-like",
+  "color_code": "0000ff"
+}
+###
+Put {{devHost}}/critters/6652bbc76792f4e5e8633933 HTTP/1.1
+content-type: application/json
+  
+{
+  "name": "Jill",
+  "intelligence": "5",
+  "body_plan": "crab-like",
+  "color_code": "0000ff"
+}
+###
+DELETE {{devHost}}/critters/6652bcf4fbd131943f7c867e
+###
