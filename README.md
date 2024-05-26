@@ -1,1 +1,3 @@
-# create a critter. see /docs for docs
+# create a critter.
+
+see `/docs` for docs
