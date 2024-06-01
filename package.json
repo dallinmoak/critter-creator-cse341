@@ -3,19 +3,21 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
     "start": "node index.js",
-    "build": "set NODE_ENV=production && npm i && npm run docs",
-    "docs": "node generateSwagger.js"
+    "build": "cross-env NODE_ENV=production pnpm perform-build",
+    "perform-build": "pnpm i && pnpm gen-docs",
+    "gen-docs": "node generateSwagger.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.3.3",
-    "swagger-ui-express": "^5.0.0",
-    "swagger-autogen": "^2.23.7"
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
