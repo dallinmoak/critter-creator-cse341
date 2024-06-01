@@ -6,7 +6,6 @@ const host =
   env == "production"
     ? process.env.RENDER_EXTERNAL_HOSTNAME
     : `${process.env.HOST}:${process.env.PORT || 3000}`;
-
 const doc = {
   info: {
     version: "1.0.0",
