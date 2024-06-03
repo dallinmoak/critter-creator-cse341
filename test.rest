@@ -1,10 +1,11 @@
 @devHost = http://localhost:3000
 @prodHost = https://critter-creator-cse341.onrender.com
 
+### *********************GET ALL*********************
 GET {{devHost}}/critters
-###
+### ********************GET BY ID********************
 GET {{devHost}}/critters/6652b844a2aaf13dff8f4c88
-###
+### **********************POST***********************
 POST {{devHost}}/critters HTTP/1.1
 content-type: application/json
 
@@ -14,8 +15,8 @@ content-type: application/json
   "body_plan": "crab-like",
   "color_code": "0000ff"
 }
-###
-Put {{devHost}}/critters/6652bbc76792f4e5e8633933 HTTP/1.1
+### ***********************PUT***********************
+PUT {{devHost}}/critters/6652bbc76792f4e5e8633933 HTTP/1.1
 content-type: application/json
   
 {
@@ -24,14 +25,22 @@ content-type: application/json
   "body_plan": "crab-like",
   "color_code": "0000ff"
 }
+### *********************DELETE**********************
+DELETE {{devHost}}/critters/665d20f733da326e39492eee
+
 ###
-DELETE {{devHost}}/critters/6652bcf4fbd131943f7c867e
+### -------------------------------------------------
+###                     PROD HOST
+### -------------------------------------------------
 ###
 
+### *********************GET ALL*********************
 GET {{prodHost}}/critters
-###
+
+### ********************GET BY ID********************
 GET {{prodHost}}/critters/6652b844a2aaf13dff8f4c88
-###
+
+### **********************POST***********************
 POST {{prodHost}}/critters HTTP/1.1
 content-type: application/json
 
@@ -41,8 +50,9 @@ content-type: application/json
   "body_plan": "crab-like",
   "color_code": "0000ff"
 }
-###
-Put {{prodHost}}/critters/6652bbc76792f4e5e8633933 HTTP/1.1
+
+### ***********************PUT***********************
+PUT {{prodHost}}/critters/6652bbc76792f4e5e8633933 HTTP/1.1
 content-type: application/json
   
 {
@@ -51,6 +61,6 @@ content-type: application/json
   "body_plan": "crab-like",
   "color_code": "0000ff"
 }
-###
-DELETE {{prodHost}}/critters/6652bcf4fbd131943f7c867e
-###
+
+### *********************DELETE**********************
+DELETE {{prodHost}}/critters/665d20f733da326e39492eee
