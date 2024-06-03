@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon index.js",
     "start": "node index.js",
-    "build": "cross-env NODE_ENV=production pnpm perform-build",
-    "perform-build": "pnpm i && pnpm gen-docs",
+    "build": "pnpm i && cross-env NODE_ENV=production pnpm gen-docs",
     "gen-docs": "node generateSwagger.js"
   },
   "dependencies": {
