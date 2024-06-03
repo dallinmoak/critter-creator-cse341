@@ -37,7 +37,7 @@ router.post("/", (req, res) => {
     schema: { $ref: "#/definitions/Critter" }
   }
   */
-  critterController.createById(req, res);
+  critterController.createCritter(req, res);
 });
 
 router.put("/:id", (req, res) => {

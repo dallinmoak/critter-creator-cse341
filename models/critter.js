@@ -19,4 +19,7 @@ const critterSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("Critter", critterSchema);
+export default {
+  critterSchema,
+  Critter: mongoose.model("Critter", critterSchema),
+};
