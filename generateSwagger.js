@@ -16,10 +16,10 @@ const doc = {
   schemes: [env == "production" ? "https" : "http"],
   definitions: {
     Critter: {
-      $name: "string",
-      $intelligence: "number",
-      $body_plan: "string",
-      $color_code: "string",
+      $name: "joe",
+      $intelligence: 1,
+      $body_plan: "bipedal",
+      $color_code: "ff0000",
     },
     Critters: [{ $ref: "#/definitions/Critter" }],
   },
